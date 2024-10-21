@@ -1,0 +1,273 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: http://127.0.0.2:5501/createBook.html
+Subject: createBook
+Date: Mon, 29 Apr 2024 01:56:35 +0300
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--BC0DqWFv7O6QbqhrKh9zM7EdeHzx9PbnAtERLiXhKg----"
+
+
+------MultipartBoundary--BC0DqWFv7O6QbqhrKh9zM7EdeHzx9PbnAtERLiXhKg----
+Content-Type: text/html
+Content-ID: <frame-1702F9CE0CA74223616C97727B6606B1@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://127.0.0.2:5501/createBook.html
+
+<!DOCTYPE html><html lang=3D"en"><head><meta http-equiv=3D"Content-Type" co=
+ntent=3D"text/html; charset=3DUTF-8">
+   =20
+    <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=
+=3D1.0">
+    <title>createBook</title>
+    <link rel=3D"stylesheet" href=3D"http://127.0.0.2:5501/book.css">
+</head>
+
+<body>
+
+    <div class=3D"container">
+        <div class=3D"img-container">
+            <img src=3D"http://127.0.0.2:5501/download.png" width=3D"100px"=
+ height=3D"100px">
+        </div>
+
+        <div class=3D"information">
+            <input type=3D"text" name=3D"" id=3D"name" placeholder=3D"Enter=
+ book name" fdprocessedid=3D"laasnn">
+            <input type=3D"text" name=3D"" id=3D"author" placeholder=3D"Ent=
+er book author" fdprocessedid=3D"p51ukq">
+            <input type=3D"text" name=3D"" id=3D"category" placeholder=3D"E=
+nter book category" fdprocessedid=3D"twg4aj">
+            <input type=3D"text" name=3D"" id=3D"rating" placeholder=3D"Ent=
+er book rating" fdprocessedid=3D"lmyli">
+            <select name=3D"technology" id=3D"list" fdprocessedid=3D"yd6lr"=
+>
+                <option value=3D"" disabled=3D"" selected=3D"">Select genre=
+</option>
+                 <option value=3D"Romance">Romance</option>
+            <option value=3D"Thriller">Thriller</option>
+            <option value=3D"Fiction">Fiction</option>
+              </select>
+
+
+
+            <button type=3D"submit" id=3D"lgn-btn" fdprocessedid=3D"4z7j3">=
+create a book</button>
+        </div>
+        <p style=3D"color: red" id=3D"message"></p>
+    </div>
+    <h1 class=3D"nb-of-books" id=3D"nb-of-books">Number of Books: 2</h1>
+
+    <div id=3D"appendHere">
+
+   =20
+          <div>
+              <div class=3D"card">
+                  <div class=3D"content-container">
+                      <h3 class=3D"article-title">fatima</h3>
+                      <h3 class=3D"article-title">h</h3>
+                      <h3 class=3D"article-title">r</h3>
+                      <p class=3D"article-content">h</p>
+                      <p class=3D"article-content">Romance</p>
+                      <div class=3D"button-container">
+                    <button class=3D"view-btn" fdprocessedid=3D"rwsvh9">Vie=
+w</button>
+                      <button class=3D"delete-btn" fdprocessedid=3D"icqzk9"=
+>Delete</button>
+                      </div>
+                  </div>
+                </div>
+          </div>
+     =20
+          <div>
+              <div class=3D"card">
+                  <div class=3D"content-container">
+                      <h3 class=3D"article-title">fatimaj</h3>
+                      <h3 class=3D"article-title">h</h3>
+                      <h3 class=3D"article-title">r</h3>
+                      <p class=3D"article-content">h</p>
+                      <p class=3D"article-content">Thriller</p>
+                      <div class=3D"button-container">
+                    <button class=3D"view-btn" fdprocessedid=3D"b9k73a">Vie=
+w</button>
+                      <button class=3D"delete-btn" fdprocessedid=3D"jhd1ja"=
+>Delete</button>
+                      </div>
+                  </div>
+                </div>
+          </div>
+      </div>
+
+    <div class=3D"filter-section">
+        <input type=3D"text" id=3D"searchTitle" placeholder=3D"Search by ti=
+tle" fdprocessedid=3D"wpu42d">
+        <select id=3D"categoryFilter" fdprocessedid=3D"px6y38">
+            <option value=3D"">All Categories</option>
+            <option value=3D"Romance">Romance</option>
+            <option value=3D"Thriller">Thriller</option>
+            <option value=3D"Fiction">Fiction</option>
+        </select>
+    </div>
+       =20
+   =20
+    <div id=3D"selectedBookInfo">
+    <p>Selected Book:</p>
+    <p>Title: fatima</p>
+    <p>Author: r</p>
+    <p>Category: h</p>
+    <p>Rating: h</p>
+    <p>Rating: Romance</p>
+</div>
+
+
+   =20
+<!-- Code injected by live-server -->
+
+
+
+<span id=3D"PING_IFRAME_FORM_DETECTION" style=3D"display: none;"></span></b=
+ody></html>
+------MultipartBoundary--BC0DqWFv7O6QbqhrKh9zM7EdeHzx9PbnAtERLiXhKg----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://127.0.0.2:5501/book.css
+
+@charset "utf-8";
+
+body { margin: 0px; padding: 0px; height: 100vh; background-color: rgb(204,=
+ 204, 204); }
+
+.container { background-color: rgb(255, 255, 255); padding: 20px; width: 30=
+%; height: auto; margin: auto; justify-content: center; align-items: center=
+; }
+
+.img-container { display: flex; justify-content: center; align-items: cente=
+r; margin-bottom: 20px; }
+
+.information { display: flex; flex-direction: column; margin-top: 20px; }
+
+.container input, .information input, #list { margin: 10px 0px; padding: 8p=
+x; width: 100%; box-sizing: border-box; background-color: rgb(255, 255, 255=
+); border: 1px solid grey; }
+
+.information button { margin-top: 20px; }
+
+button { padding: 13px; border: none; color: white; font-weight: bold; curs=
+or: pointer; width: 100%; }
+
+#lgn-btn { background-color: rgb(24, 131, 238); }
+
+#appendHere { display: flex; flex-flow: wrap; justify-content: space-around=
+; }
+
+.card { width: 300px; background-color: rgb(255, 255, 255); color: rgb(0, 0=
+, 0); margin: 10px; padding: 20px; border-radius: 5px; box-shadow: rgba(0, =
+0, 0, 0.1) 0px 4px 8px; justify-content: center; align-items: center; }
+
+.content-container { margin: 60px; }
+
+.button-container { display: flex; flex-direction: row; gap: 2px; }
+
+.view-btn { border-radius: 10px; background-color: rgb(1, 116, 190); color:=
+ white; text-align: center; padding: 1em; }
+
+.delete-btn { border-radius: 10px; background-color: rgb(190, 1, 1); color:=
+ white; text-align: center; padding: 1em; }
+------MultipartBoundary--BC0DqWFv7O6QbqhrKh9zM7EdeHzx9PbnAtERLiXhKg----
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: http://127.0.0.2:5501/download.png
+
+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
+JrQhFkPnAAAAAElFTkSuQmCC
+
+------MultipartBoundary--BC0DqWFv7O6QbqhrKh9zM7EdeHzx9PbnAtERLiXhKg------

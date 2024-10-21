@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe Website</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+ 
+  <link rel="stylesheet" href="
+https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+integrity="sha512-Myl/xd5Ed3t4YpqP4uP6LEw8f8sG6I4uh3zG23iZp1V3ve2k7Ss2NRpoxlL6hfNJcLbV/N7XJpJPgr3F7HHzwQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+  
+
+  
+</head>
+<body>
+
+  <header id="slideshowHeader">
+    <div class="slideshow-container">
+      <div class="slide">
+        <img src="img/fb1.jpg" style="width:100%;">
+      </div>
+      <div class="slide">
+        <img src="img/fb2.jpg" style="width:100%;">
+      </div>
+
+      <div class="slide">
+        <img src="img/fb3.jpg" style="width:100%;">
+      </div>
+
+      <div class="slide">
+        <img src="img/fb4.jpg" style="width:100%;">
+      </div>
+      <div class="slide">
+        <img src="img/fb5.jpg" style="width:100%;">
+      </div>
+      <div class="slide">
+        <img src="img/fb6.jpg" style="width:100%;">
+      </div>
+  
+      <div class="text-overlay">
+        <h1>Recipes</h1>
+        <p>Explore Easy-to-Make Recipes for Every Meal!</p>
+      </div>
+    </div>
+    
+  </header>
+
+  <div class="loader">
+    <span class="loader__element"></span>
+    <span class="loader__element"></span>
+    <span class="loader__element"></span>
+  </div>
+
+<nav>
+  <ul>
+    <li><a href="#" onclick="showRecipes('all', event); return false;">All Recipes</a></li>
+    <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Categories</a>
+        <div class="dropdown-content">
+            <a href="#" onclick="showRecipes('Breakfast', event); return false;">Breakfast</a>
+            <a href="#" onclick="showRecipes('Lunch', event); return false;">Lunch</a>
+            <a href="#" onclick="showRecipes('Dinner', event); return false;">Dinner</a>
+          
+        </div>
+    </li>
+    <li><a href="#" onclick="openAddRecipeModal(event); return false;">Add Recipe</a></li>
+    <li>  <a href="#contact" >Contact Us</a></li>
+
+   <li>    
+    <div class="search">
+        <input type="text" id="searchInput" placeholder="What are you looking for?">
+        <button type="submit"  onclick="searchRecipes()" class="searchButton">
+            <i class="fa fa-search"></i>
+        </button>
+       
+
+   
+      </div></li>
+     </ul>
+     </nav>
+
+      </div>
+  </div>
+  </form>
+   
+  <div class="container">
+    <div id="recipesList"></div> 
+</div>
+
+
+<!-- Edit -->
+<form class="form11">
+<div id="editRecipeModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeEditRecipeModal()">&times;</span>
+    <h2>Edit Recipe</h2>
+    <form id="editRecipeForm">
+      <input type="hidden" id="editRecipeIndex">
+      <label for="editRecipeName">Name:</label>
+      <input type="text" id="editRecipeName" required><br>
+      
+      <label for="editRecipeCategory">Category:</label>
+      <select id="editRecipeCategory" required>
+        <option value="Breakfast">Breakfast</option>
+        <option value="Lunch">Lunch</option>
+        <option value="Dinner">Dinner</option>
+      </select><br>
+      
+      <label for="editRecipeIngredients">Ingredients:</label>
+      <textarea id="editRecipeIngredients" rows="4" required></textarea>
+      
+      <label for="editRecipeInstructions">Instructions:</label>
+      <textarea id="editRecipeInstructions" rows="4" required></textarea>
+      
+      
+
+      <label for="editRecipeImageUrl">Image URL:</label>
+      <input type="text" id="editRecipeImageUrl" required><br>
+      
+      <button type="button" onclick="saveEditedRecipe()">Save Changes</button>
+    </form>
+  </div>
+</div>
+</form>
+
+
+<!-- Add  -->
+<form class="form11">
+<div id="addRecipeModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeAddRecipeModal()">&times;</span>
+    <h2>Add New Recipe</h2>
+    <form id="addRecipeForm">
+      <label for="recipeName">Name:</label>
+      <input type="text" id="recipeName" required><br>
+      
+      <label for="recipeCategory">Category:</label>
+      <select id="recipeCategory" type="select" required>
+        <option value="Breakfast">Breakfast</option>
+        <option value="Lunch">Lunch</option>
+        <option value="Dinner">Dinner</option>
+      </select><br>
+      
+      <label for="recipeIngredients">Ingredients:</label>
+      <textarea id="recipeIngredients" rows="4" required></textarea>
+     
+
+      <label for="recipeInstructions">Instructions:</label>
+      <textarea id="recipeInstructions" rows="4" required></textarea>
+      
+     
+      
+      <label for="recipeImage">Image:</label>
+      <input type="text" id="recipeImageUrl" placeholder="Image URL">
+      <p>Or</p>
+      <input type="file" id="recipeImage" accept="image/jpeg, image/png">
+      
+      <button type="button" onclick="addRecipe()">Add Recipe</button>
+    </form>
+  </div>
+</div>
+</form>
+
+<form class="form22" id="contact">
+  <section class="contact-page-section">
+    <div class="container">
+        <div class="inner-container">
+            <div class="row">
+                <div class="form-column column">
+                    <div class="contact-form">
+                        <form method="post" action="sendemail.php" id="contact-form">
+                            <div class="row">
+                                <div >
+                                    <input type="text" name="name" placeholder="Name" required>
+                                    <input type="text" name="subject" placeholder="Subject" required>
+                                    <input type="email" name="email" placeholder="Email" required>
+                                    <input type="text" name="phone" placeholder="Phone" required>
+                                    <textarea type="textarea" name="message" rows="7" placeholder="Message" required></textarea>
+                                    <button type="submit">Send Now</button>
+                                </div>
+                              </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="info-column column">
+                    <h2>Contact Info</h2>
+                    <ul class="list-info">
+                        <li>Lebanon, Baabda, University Antonine</li>
+                        <li>We'd love to hear from you! Please reach 
+                          out with any questions you might have.</li>
+                        <li>recipewebsite@gmail.com</li>
+                        <li>1-234-567-890<br>1-234-567-890</li>
+                    </ul>
+                    <ul class="social-icon-four">
+                        <li class="follow">Follow on: </li>
+                        <li> 
+                          <img src="img/insta.png" alt="Placeholder Image">
+                          <a href="#">Instagram</a>
+                        </li>
+                        <li> 
+                          <img src="img/xxx.png" alt="Placeholder Image">
+                          <a href="#">Twitter</a>
+                        </li>
+                        <li>
+                          <img src="img/google.png" alt="Placeholder Image">
+                          <a href="#">Google+</a>
+                        </li>
+                       
+                        <li> 
+                          <img src="img/pinterest.png" alt="Placeholder Image">
+                          <a href="#">Pinterest</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</form>
+
+
+<script src="java.js"></script>
+<script src="
+https://kit.fontawesome.com/10785dd742.js"
+crossorigin="anonymous"></script>
+
+</body>
+</html>
